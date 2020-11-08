@@ -1,6 +1,6 @@
 # Startup Name Generator (first_flutter_app)
 
-
+![Image](preview/demo.gif)
 
 ## Getting Started
 
