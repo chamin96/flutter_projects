@@ -1,6 +1,6 @@
-# first_flutter_app
+# Startup Name Generator (first_flutter_app)
 
-Write your first Flutter app
+
 
 ## Getting Started
 
