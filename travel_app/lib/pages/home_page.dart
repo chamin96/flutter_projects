@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget appBar() {
     return AppBar(
-      title: Text('Places App - Responsive'),
+      title: Text('Travel Free LK'),
     );
   }
 
