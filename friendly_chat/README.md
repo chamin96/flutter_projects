@@ -3,7 +3,7 @@
 Google Codelab Project | Building beautiful UIs with Flutter
 
 ## Preview
-![Image](preview/demo.gif)
+<img src="preview/demo.gif" alt="demo" width="200">
 
 ## Getting Started
 
