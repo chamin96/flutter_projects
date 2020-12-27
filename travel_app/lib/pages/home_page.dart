@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: ExactAssetImage(
-                        'assets/images/india_chettinad_silk_maker.png')),
+                        'assets/images/india_thanjavur_market.png')),
               ),
               child: Container(
                 alignment: AlignmentDirectional.bottomStart,
