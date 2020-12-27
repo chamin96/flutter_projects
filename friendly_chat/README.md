@@ -2,6 +2,9 @@
 
 Google Codelab Project | Building beautiful UIs with Flutter
 
+## Preview
+![Image](preview/demo.gif)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
