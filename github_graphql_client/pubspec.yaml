@@ -23,6 +23,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  fluttericon: ^1.0.7
+  gql: ^0.12.3
+  gql_exec: ^0.2.4
+  gql_link: ^0.3.0
+  gql_http_link: ^0.3.2
+  gql_transform_link: ^0.1.5
+  http: ^0.12.1
+  oauth2: ^1.6.1
+  url_launcher: ^5.4.10
+  window_to_front:
+    path: '../window_to_front'
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -30,6 +41,8 @@ dependencies:
   cupertino_icons: ^1.0.1
 
 dev_dependencies:
+  build_runner: ^1.10.11
+  gql_build: ^0.0.11
   flutter_test:
     sdk: flutter
   integration_test:
