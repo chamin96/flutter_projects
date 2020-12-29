@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+## Preview
+<img src="flutter_desktop_app_demo.gif" alt="demo" width="400">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
