@@ -3,7 +3,7 @@
 A new Flutter application.
 
 ## Preview
-<img src="preview/mi.png" alt="demo" width="200">
+<img src="mi.png" alt="demo" width="200">
 
 ## Getting Started
 
