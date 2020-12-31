@@ -2,6 +2,9 @@
 
 A new Flutter application.
 
+## Preview
+<img src="dicee-demo.gif" alt="demo" width="200">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
