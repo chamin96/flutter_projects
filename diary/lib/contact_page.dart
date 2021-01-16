@@ -11,7 +11,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Hive Tutorial'),
+          title: Text('Add New'),
         ),
         body: Column(
           children: <Widget>[
