@@ -11,7 +11,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Add New'),
+          title: Text('My Contacts'),
         ),
         body: Column(
           children: <Widget>[
@@ -26,7 +26,7 @@ class ContactPage extends StatelessWidget {
       children: <Widget>[
         ListTile(
           title: Text('Name'),
-          subtitle: Text('Age'),
+          subtitle: Text('Phone'),
         )
       ],
     );
