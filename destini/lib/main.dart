@@ -43,7 +43,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: Container(
                   color: Colors.black54,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Center(
                       child: Text(
                         storyBrain.getStory(),
@@ -55,6 +55,9 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Expanded(
                 flex: 2,
