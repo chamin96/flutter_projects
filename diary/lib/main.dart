@@ -1,13 +1,16 @@
+import 'package:diary/models/contact.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'contact_page.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final appDocumentDirectory =
       await path_provider.getApplicationDocumentsDirectory();
   Hive.init(appDocumentDirectory.path);
+  Hive.registerAdapter(ContactAdapter());
   runApp(MyApp());
 }
 
@@ -21,7 +24,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Diary',
+      title: 'Kontacts',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        accentColor: Colors.blueGrey,
+      ),
       home: FutureBuilder(
         future: Hive.openBox('contacts'),
         builder: (context, snapshot) {
@@ -35,7 +42,15 @@ class _MyAppState extends State<MyApp> {
           // Although opening a Box takes a very short time,
           // we still need to return something before the Future completes.
           else
-            return Scaffold();
+            return Scaffold(
+              body: Center(
+                child: SpinKitFadingCircle(
+                  color: Theme.of(context).primaryColor,
+                  size: 50.0,
+                  duration: Duration(milliseconds: 100),
+                ),
+              ),
+            );
         },
       ),
     );
