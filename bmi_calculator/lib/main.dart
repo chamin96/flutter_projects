@@ -21,7 +21,7 @@ class BMICalculator extends StatelessWidget {
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: Color(0xFF0A0E21),
         accentColor: Colors.amber,
-        scaffoldBackgroundColor: Color(0xFF1D2136),
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Colors.amber,
         ),
