@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './components/Task.dart';
+
 void main() {
   runApp(ToDoApp());
 }
@@ -47,8 +49,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Color(0xFFDCDCD7),
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Text(
           widget.title,
           style: TextStyle(
@@ -76,16 +77,53 @@ class _HomePageState extends State<HomePage> {
         ],
         elevation: 0.0,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Today',
+              style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Column(
+              children: <Widget>[
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+              ],
             ),
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              'Tomorrow',
+              style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Column(
+              children: <Widget>[
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+                Task(),
+              ],
+            ),
+            Text(
+              'Upcoming',
+              style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
