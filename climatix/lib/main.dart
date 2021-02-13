@@ -17,15 +17,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 3,
+      seconds: 4,
       navigateAfterSeconds: AfterSplash(),
-      title: Text(
-        'Welcome In SplashScreen',
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-      ),
       image: Image.asset('images/splash_image.png'),
+      photoSize: 100.0,
       backgroundColor: Colors.white,
-      loaderColor: Colors.red,
     );
   }
 }
