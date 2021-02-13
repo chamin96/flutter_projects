@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ToDoApp());
 }
 
-class MyApp extends StatelessWidget {
+class ToDoApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'To Do App',
       theme: ThemeData(
-        primarySwatch: Colors.indigo[400],
+        primarySwatch: Colors.indigo,
         primaryColor: Color(0xFF5D61A2),
         accentColor: Color(0xFF93CDD1),
         scaffoldBackgroundColor: Color(0xFFDCDCD7),
@@ -19,21 +20,21 @@ class MyApp extends StatelessWidget {
         splashColor: Color(0xFFA7D0B8),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Tasks'),
+      home: HomePage(title: ''),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -46,7 +47,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        centerTitle: true,
+        backgroundColor: Color(0xFFDCDCD7),
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            color: Color(0xFF5D61A2),
+            fontSize: 32.0,
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.assignment_turned_in,
+              color: Color(0xFF5D61A2),
+              size: 30.0,
+            ),
+            onPressed: () => {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.more_vert_sharp,
+              color: Color(0xFF5D61A2),
+              size: 30.0,
+            ),
+            onPressed: () => {},
+          ),
+        ],
         elevation: 0.0,
       ),
       body: Center(
@@ -67,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
